@@ -27,7 +27,7 @@ st.set_page_config(
 BASE_DIR = Path(__file__).resolve().parent
 # PLANT_MODEL_PATH = BASE_DIR / "Trained_my_Model.h5"
 HOUSE_MODEL_PATH = BASE_DIR / "house_price_model.pkl"
-HOME_IMAGE_PATH = BASE_DIR / "PD.png"
+HOME_IMAGE_PATH = BASE_DIR / "PD.jpg"
 
 # =========================
 # CLASS LABELS
@@ -150,7 +150,7 @@ if app_mode == "Home":
     st.markdown("""
     Welcome to the **Multi-Model Prediction System**.
 
-    This app currently supports:
+    This Website currently supports:
 
     - **Plant Disease Recognition**
     - **California House Price Prediction**
