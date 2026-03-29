@@ -1,4 +1,0 @@
-Trained_my_Model.h5
-__pycache__/
-*.pyc
-.env
