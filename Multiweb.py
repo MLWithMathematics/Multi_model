@@ -150,7 +150,7 @@ if app_mode == "Home":
     st.markdown("""
     Welcome to the **Multi-Model Prediction System**.
 
-    This app currently supports:
+    This Website currently supports:
 
     - **Plant Disease Recognition**
     - **California House Price Prediction**
