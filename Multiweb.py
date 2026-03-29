@@ -27,7 +27,7 @@ st.set_page_config(
 BASE_DIR = Path(__file__).resolve().parent
 # PLANT_MODEL_PATH = BASE_DIR / "Trained_my_Model.h5"
 HOUSE_MODEL_PATH = BASE_DIR / "house_price_model.pkl"
-HOME_IMAGE_PATH = BASE_DIR / "PD.jpg"
+HOME_IMAGE_PATH = BASE_DIR / "PD.png"
 
 # =========================
 # CLASS LABELS
