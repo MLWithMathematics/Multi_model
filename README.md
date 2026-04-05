@@ -13,6 +13,50 @@ The app allows users to:
 * Enter housing data and predict house prices
 
 ---
+🌿 Plant Disease Model – Test Dataset Validation
+📌 Purpose
+
+To ensure reproducibility and transparency, this project includes a curated test image dataset. Users can validate model performance using these predefined samples and compare predicted outputs with actual labels.
+
+📂 Test Dataset Location
+project/
+│
+├── test_images/
+│   ├── Apple___Black_rot/
+│   │   ├── img1.jpg
+│   │   ├── img2.jpg
+│   │
+│   ├── Tomato___Healthy/
+│   │   ├── img3.jpg
+│   │   ├── img4.jpg
+│   │
+│   └── ...
+
+👉 Each folder name represents the true class label.
+
+▶️ How to Run the App
+streamlit run Web.py
+🧪 How to Test Using Provided Dataset
+Open the app in your browser
+Navigate to 🌿 Plant Disease Prediction from the sidebar
+Upload an image from the test_images/ folder
+Observe:
+✅ Predicted Class
+📊 Confidence Score
+📊 Expected Behavior
+The predicted label should match the folder name (ground truth)
+High confidence (>80%) is expected for most samples
+Some misclassifications may occur due to:
+Similar disease patterns
+Image quality variations
+✅ Example Test Case
+Image Path	Actual Label	Predicted Label	Confidence
+Apple___Black_rot/img1.jpg	Black Rot	Black Rot	92.4%
+Tomato___Healthy/img3.jpg	Healthy	Healthy	97.1%
+⚠️ Notes
+  Images are resized to 128×128 before inference
+  Model was trained on 38 plant disease classes
+  Ensure good lighting and clear leaf visibility for best results
 
 ## 🧠 Models Used
 
