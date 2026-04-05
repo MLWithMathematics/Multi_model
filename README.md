@@ -13,50 +13,88 @@ The app allows users to:
 * Enter housing data and predict house prices
 
 ---
-🌿 Plant Disease Model – Test Dataset Validation
-📌 Purpose
+## 🌿 Testing Plant Disease Model (Using Provided Test Dataset)
 
-To ensure reproducibility and transparency, this project includes a curated test image dataset. Users can validate model performance using these predefined samples and compare predicted outputs with actual labels.
+To ensure consistent and verifiable results, this project includes a curated **test dataset** of plant leaf images inside the repository. Users are encouraged to test the model using only these images to reproduce expected outputs.
 
-📂 Test Dataset Location
-project/
-│
-├── test_images/
-│   ├── Apple___Black_rot/
-│   │   ├── img1.jpg
-│   │   ├── img2.jpg
-│   │
-│   ├── Tomato___Healthy/
-│   │   ├── img3.jpg
-│   │   ├── img4.jpg
-│   │
-│   └── ...
+---
 
-👉 Each folder name represents the true class label.
+### 📁 Test Dataset Location
 
-▶️ How to Run the App
-streamlit run Web.py
-🧪 How to Test Using Provided Dataset
-Open the app in your browser
-Navigate to 🌿 Plant Disease Prediction from the sidebar
-Upload an image from the test_images/ folder
-Observe:
-✅ Predicted Class
-📊 Confidence Score
-📊 Expected Behavior
-The predicted label should match the folder name (ground truth)
-High confidence (>80%) is expected for most samples
-Some misclassifications may occur due to:
-Similar disease patterns
-Image quality variations
-✅ Example Test Case
-Image Path	Actual Label	Predicted Label	Confidence
-Apple___Black_rot/img1.jpg	Black Rot	Black Rot	92.4%
-Tomato___Healthy/img3.jpg	Healthy	Healthy	97.1%
-⚠️ Notes
-  Images are resized to 128×128 before inference
-  Model was trained on 38 plant disease classes
-  Ensure good lighting and clear leaf visibility for best results
+```
+/test_images/
+    ├── Apple___Black_rot/
+    ├── Tomato___Early_blight/
+    ├── Potato___Late_blight/
+    └── ...
+```
+
+Each folder represents the **true class label** of the images it contains.
+
+---
+---
+
+### 🧪 How to Test (Step-by-Step)
+
+1. Launch the Streamlit app.
+2. Navigate to **"Plant Disease Prediction"** from the sidebar.
+3. Upload an image from the `/test_images/` folder.
+4. Click on **Predict**.
+5. Observe:
+
+   * Predicted disease class
+   * Confidence score
+
+---
+
+### ✅ Expected Behavior
+
+* The predicted class should match the **folder name** (ground truth).
+* Confidence scores should generally be **high (>80%)** for correct predictions.
+* Minor misclassifications may occur due to model limitations.
+
+---
+
+### 📊 Example Test Case
+
+| Image Path                                 | Actual Class        | Predicted Class     | Confidence |
+| ------------------------------------------ | ------------------- | ------------------- | ---------- |
+| test_images/Tomato___Early_blight/img1.jpg | Tomato Early Blight | Tomato Early Blight | 92.4%      |
+
+---
+
+### ⚠️ Important Notes
+
+* Only use images from the provided `/test_images/` directory for consistent results.
+* External images may produce unpredictable results due to domain differences.
+* Ensure images are clear and contain a **single leaf**.
+
+---
+
+### 💡 Tip for Reviewers
+
+For quick validation:
+
+* Pick any random image from a folder
+* Upload it in the app
+* Verify if prediction matches folder name
+
+This ensures **transparent and reproducible evaluation** of the model.
+
+---
+
+---
+
+### 🎯 Goal
+
+This testing setup demonstrates:
+
+* Model reliability
+* Real-world usability
+* Reproducibility of results
+
+---
+
 
 ## 🧠 Models Used
 
