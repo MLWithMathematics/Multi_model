@@ -34,64 +34,100 @@ Each folder represents the **true class label** of the images it contains.
 ---
 ---
 
-### 🧪 How to Test (Step-by-Step)
+## 🌿 Try the Plant Disease Detection Model (Live Demo)
 
-1. Launch the Streamlit app.
-2. Navigate to **"Plant Disease Prediction"** from the sidebar.
-3. Upload an image from the `/test_images/` folder.
+You can test the model directly using the deployed Streamlit app:
+
+👉 **Live App:** https://your-streamlit-app-url.streamlit.app/
+
+---
+
+### 🚀 How to Use the Web App
+
+1. Open the live app using the link above.
+2. From the sidebar, select **"Plant Disease Prediction"**.
+3. Upload a plant leaf image.
 4. Click on **Predict**.
-5. Observe:
+5. View:
 
-   * Predicted disease class
-   * Confidence score
-
----
-
-### ✅ Expected Behavior
-
-* The predicted class should match the **folder name** (ground truth).
-* Confidence scores should generally be **high (>80%)** for correct predictions.
-* Minor misclassifications may occur due to model limitations.
+   * 🌱 Predicted disease class
+   * 📊 Confidence score
 
 ---
 
-### 📊 Example Test Case
+### 🧪 Recommended Testing (Using Provided Dataset)
 
-| Image Path                                 | Actual Class        | Predicted Class     | Confidence |
-| ------------------------------------------ | ------------------- | ------------------- | ---------- |
-| test_images/Tomato___Early_blight/img1.jpg | Tomato Early Blight | Tomato Early Blight | 92.4%      |
+For consistent and verifiable results, use images from the repository:
+
+```id="6y3z8k"
+/test_images/
+```
+
+#### Steps:
+
+1. Download or clone this repository:
+
+```bash id="x1n9pd"
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+2. Navigate to the `/test_images/` folder.
+
+3. Choose any image from a class folder (e.g.):
+
+```
+test_images/Tomato___Early_blight/
+```
+
+4. Upload that image in the web app.
 
 ---
 
-### ⚠️ Important Notes
+### ✅ Expected Results
 
-* Only use images from the provided `/test_images/` directory for consistent results.
-* External images may produce unpredictable results due to domain differences.
-* Ensure images are clear and contain a **single leaf**.
-
----
-
-### 💡 Tip for Reviewers
-
-For quick validation:
-
-* Pick any random image from a folder
-* Upload it in the app
-* Verify if prediction matches folder name
-
-This ensures **transparent and reproducible evaluation** of the model.
+* The prediction should match the **folder name (actual class)**.
+* Confidence scores are typically **high (>80%)** for correct predictions.
+* Occasional errors may occur due to model limitations.
 
 ---
 
+### 📌 Example
+
+| Image Source                           | Actual Class    | Expected Prediction |
+| -------------------------------------- | --------------- | ------------------- |
+| test_images/Apple___Black_rot/img1.jpg | Apple Black Rot | Apple Black Rot     |
+
 ---
 
-### 🎯 Goal
+### ⚠️ Notes
 
-This testing setup demonstrates:
+* Best results are obtained with:
 
-* Model reliability
-* Real-world usability
-* Reproducibility of results
+  * Clear images
+  * Single leaf in frame
+* Avoid blurry or multiple-leaf images.
+* External images may give less accurate results.
+
+---
+
+### 💡 Quick Tip
+
+To quickly verify the model:
+
+* Pick any random image from `/test_images/`
+* Upload it to the app
+* Check if prediction matches the folder name
+
+---
+
+### 🎯 What This Demonstrates
+
+* Real-world usability via web interface
+* Model accuracy on known test samples
+* Reproducible and transparent evaluation
+
+---
 
 ---
 
