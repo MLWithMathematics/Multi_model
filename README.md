@@ -38,7 +38,7 @@ Each folder represents the **true class label** of the images it contains.
 
 You can test the model directly using the deployed Streamlit app:
 
-👉 **Live App:** https://your-streamlit-app-url.streamlit.app/
+👉 **Live App:**   https://ml-prediction-system.streamlit.app/
 
 ---
 
